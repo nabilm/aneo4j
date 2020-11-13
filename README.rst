@@ -19,8 +19,6 @@ import asyncio
 loop = asyncio.get_event_loop()
 config = {'user': 'neo4j' , 'password' : 'test' , 'uri' : 'bolt://localhost:7687'}
 an = AsyncNeo4j(config=config, loop=loop)
-# and of course it require python3.7 and neo4j
-# now you should easily create queries with dynamic variables like
 CREATE (h:human { name: $name, 
                     user_name: $user_name, 
                     human_id: $human_id, 
@@ -32,6 +30,7 @@ CREATE (h:human { name: $name,
                     RETURN ID(h) as id
 #The client deals with kwargs
 ```
+
 Features
 --------
 
