@@ -2,7 +2,9 @@
 # aneo4j
 
 A work in progress !
+
 based on my [gist](https://gist.github.com/nabilm/beb31e960c099d59297c0ef0cfbac55a)
+
 aneo4j is a really simple async wrapper for neo4j since all the async wrapper/client is all out of date and the async bolt support is not ready yet
 
 
