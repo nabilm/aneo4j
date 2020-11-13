@@ -1,6 +1,6 @@
-======
-aneo4j
-======
+
+# aneo4j
+
 A work in progress !
 
 aneo4j is a really simple async wrapper for neo4j since all the async wrapper/client is all out of date and the async bolt support is not ready yet
@@ -19,6 +19,8 @@ import asyncio
 loop = asyncio.get_event_loop()
 config = {'user': 'neo4j' , 'password' : 'test' , 'uri' : 'bolt://localhost:7687'}
 an = AsyncNeo4j(config=config, loop=loop)
+# And of course it require python3.7 and neo4j
+# Now you should easily create queries with dynamic variables like
 CREATE (h:human { name: $name, 
                     user_name: $user_name, 
                     human_id: $human_id, 
@@ -28,9 +30,8 @@ CREATE (h:human { name: $name,
                     birhdate: date($birthdate)
                     })
                     RETURN ID(h) as id
-#The client deals with kwargs
+# The client deals with kwargs
 ```
-
 Features
 --------
 
